@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./box.css">
+   <style>
+    *{
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+   
+}
+body{
+    height: 100vh;
+    background: #28199b;
+}
+.contaniner_1{
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: rotate(-90deg); */
+    transform-style: preserve-3d;
+    
+    animation: animate 5s infinite;
+    
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+    25%{
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    50%{
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+    75%{
+        transform: rotateX(-45deg) rotateY(45deg);
+    }
+    100%{
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+  
+}
+.sides{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    font-size: 22px;
+    box-sizing: border-box;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ;
+}
+
+
+#frount{
+    background-image: url(./3.jpg);
+    background-size: cover;
+    transform: translateZ(125px);
+}
+
+#back{ background-image: url(./6.jpg);
+    background-size: cover;
+    transform: translateZ(-125px);
+}
+#left{
+    background-image: url(./2.jpg);
+    background-size: cover;
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+#right{
+    background-image: url(./1.jpg);
+    background-size: cover;
+    left: 125px;
+    transform: rotateY(90deg);
+}
+#top{
+    background-image: url(./4.jpg);
+    background-size: cover;
+    bottom: 125px;
+    transform: rotateX(90deg);
+}
+#bottom{
+    background-image: url(./5.jpg);
+    background-size: cover;
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+
+
+.box:hover #frount{
+    transform: translateZ(180px) translateY(360deg);
+}
+.box:hover #back{
+    transform: translateZ(-180px) translateY(360deg);
+}
+.box:hover #left{
+    right: 180px;
+    transform: rotateY(90deg);
+
+}
+.box:hover #right{
+   left: 180px;
+   transform: rotateY(-90deg);
+
+}
+.box:hover #top{
+    bottom: 180px;
+    transform: rotateX(-90deg);
+
+}
+.box:hover #bottom{
+    top: 180px;
+    transform: rotateX(90deg) ;
+
+}
+
+   </style>
+    <title>box</title>
+</head>
+<body>
+    <div class="contaniner_1">
+       
+        <div class="box">
+            <div class="sides" id="frount"></div> 
+            <div class="sides" id="back"></div>
+            <div class="sides" id="left"></div>
+            <div class="sides" id="right"></div>
+            <div class="sides" id="top"></div>
+            <div class="sides" id="bottom"></div>
+          
+         
+        </div>
+      
+         </div>
+
+
+
+</body>
+</html>
