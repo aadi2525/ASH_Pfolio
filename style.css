@@ -6,9 +6,7 @@ body {
 }
 html{
   font-size: 62.5%;
-    scroll-behavior: smooth;
-
-  
+  scroll-behavior: smooth;
 }
 
 @media(max-width:998px){
@@ -59,7 +57,7 @@ html{
 
 /* <======= logo========> */
  #logo{ 
-  position: fixed;
+  position: absolute;
   /* display: flex; */
   opacity: .8;
   background-image: url(./logaA.png);
@@ -144,6 +142,7 @@ li :hover {
 }
 .topline {
   padding: 1.8rem;
+  font-size: 2rem;
 
   border: .2rem solid transparent;
   margin-top: -20vh;
@@ -170,7 +169,7 @@ li :hover {
   background-color: rgb(247, 125, 2);
 }
 .topline h5 {
-  font-size: 4vh;
+  font-size: 4rem;
   margin-top: .1rem;
   /* padding-top:. rem; */
   /* width: 10vw; */
