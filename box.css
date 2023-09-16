@@ -5,11 +5,11 @@
     
     /* height: 100vh; */
     font-family: sans-serif;
-    height: 25vh;
+    height: 45vh;
     width: 30vw;
     position: absolute;
-    top: 33%;
-    left: 80vw;
+    top: 26%;
+    left: 78vw;
     transform: translate(-50%,-50%);
     perspective: 1000px;
     display: flex;
@@ -26,160 +26,39 @@
     width: 250px;
     position: absolute;
     top: 100px;
-    left: 70px;
+    left: 30px;
     display: flex;
     justify-content: left;
     align-items: left;
-    transform: rotate(-180deg);
-    transform-style: preserve-3d;
-  
-    animation: animate 4s infinite;
-    
+ 
 
-}
 
-@keyframes animate{
-    0%{
-        transform: rotateX(45deg) rotateY(-45deg);
-    }
-    25%{
-        transform: rotateX(-45deg) rotateY(-45deg);
-    }
-    50%{
-        transform: rotateX(45deg) rotateY(45deg);
-    }
-    75%{
-        transform: rotateX(-45deg) rotateY(45deg);
-    }
-    100%{
-        transform: rotateX(45deg) rotateY(-45deg);
-    }
-  
 }
 .sides{
-    height: 250px;
-    width: 250px;
+    height: 68vh;
+    width: 30vw;
+    margin-right: 20px;
     text-align: center;
     padding: 100px 0px;
     color: white;
     background: transparent;
-    border: 4px solid rgb(247, 125, 2);
+   border-bottom:  4px solid rgb(247, 125, 2);
+    border-right:  1px solid rgb(247, 125, 2);;
     
     box-sizing: border-box;
     position: absolute;
-    transform-style: preserve-3d;
-    transition: all 1s ;
+    margin-right: 15vw;
+
+    
     border-radius: 20px;
 }
 
 
 #frount{
-    background-image: url(./3.jpg);
-    background-size: cover;
-    transform: translateZ(125px);
-}
-
-#back{ background-image: url(./6.jpg);
-    background-size: cover;
-    transform: translateZ(-125px);
-}
-#left{
-    background-image: url(./2.jpg);
-    background-size: cover;
-    right: 125px;
-    transform: rotateY(-90deg);
-}
-#right{
     background-image: url(./1.jpg);
     background-size: cover;
-    left: 125px;
-    transform: rotateY(90deg);
-}
-#top{
-    background-image: url(./4.jpg);
-    background-size: cover;
-    bottom: 125px;
-    transform: rotateX(90deg);
-}
-#bottom{
-    background-image: url(./5.jpg);
-    background-size: cover;
-    top: 125px;
-    transform: rotateX(-90deg);
+    /* transform: translateZ(125px); */
 }
 
 
-.box:hover #frount{
-    transform: translateZ(180px) translateY(360deg);
-}
-.box:hover #back{
-    transform: translateZ(-180px) translateY(360deg);
-}
-.box:hover #left{
-    right: 180px;
-    transform: rotateY(90deg);
 
-}
-.box:hover #right{
-   left: 180px;
-   transform: rotateY(-90deg);
-
-}
-.box:hover #top{
-    bottom: 180px;
-    transform: rotateX(-90deg);
-
-}
-.box:hover #bottom{
-    top: 180px;
-    transform: rotateX(90deg) ;
-
-}
-
-
-/* <=============== flip-flop==================> */
-/* .main {
-  position: relative;
-  height: 350px;
-  width: 230px;
-}
-.card {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transform-style: preserve-3d;  /* for flip-flop */
-  /* transition: all 1.2s ease-in-out; 
-}
-.card:hover {
-  transform: rotateY(180deg);
-}
-.frount {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgb(73, 15, 149);
-  backface-visibility: hidden;
-  color: orange;
-  font-style: "zilla slab", sans-serif;
-  font-weight: bold;
-  border-radius: 20px;
-  font-size: 25px;
- text-align: center;
-
-}
-.back {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: rgb(238, 237, 240);
-  backface-visibility: hidden;
-  color: rgb(14, 14, 14);
-  transform: rotateY(180deg);
-  font-style: "zilla slab", sans-serif;
-  font-weight: bold;
-  border-radius: 20px;
-  font-size: 25px;
- text-align: center;
-
-} */
-/* <=============== flip-flop==================> */
